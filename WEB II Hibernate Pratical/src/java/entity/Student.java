@@ -1,11 +1,15 @@
 package entity;
 
 import java.io.Serializable;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -26,6 +30,18 @@ public class Student implements Serializable {
     @Column(name = "email", length = 60, nullable = false)
     private String email;
 
+    @ManyToOne (cascade = CascadeType.ALL , fetch = FetchType.LAZY) 
+    @JoinColumn(name = "class_id" , nullable = false)
+    private StuClass stuClass;
+
+    public StuClass getStuClass() {
+        return stuClass;
+    }
+
+    public void setStuClass(StuClass stuClass) {
+        this.stuClass = stuClass;
+    }
+    
     public Student() {
     }
 

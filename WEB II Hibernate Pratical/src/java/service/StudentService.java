@@ -33,7 +33,8 @@ public class StudentService {
 
     public void updateStudent(Student s) {
 
-        session.update(s);
+//        session.update(s);
+        session.merge(s);
         session.beginTransaction().commit();
 
     }

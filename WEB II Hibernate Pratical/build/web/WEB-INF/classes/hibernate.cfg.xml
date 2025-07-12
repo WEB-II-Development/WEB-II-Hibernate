@@ -9,13 +9,15 @@
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">Sanjana123!$</property>
         <property name="show_sql">true</property>
-        <property name="hibernate.hbm2ddl.auto">create</property>  <!-- Tabele create kirirmata CREATE,UPDATE,CERETE-DROP-->
+        <property name="hibernate.hbm2ddl.auto">update</property>  <!-- Tabele create kirirmata CREATE,UPDATE,CERETE-DROP-->
      
         <mapping class = "entity.Student"/>
         <mapping class = "entity.StuClass"/>
         <mapping class = "entity.Subject"/>
         <mapping class = "entity.Teacher"/>
-    
+        <mapping class="entity.StudentHasSubject"/>
+
+        
     </session-factory>
 </hibernate-configuration>
 
