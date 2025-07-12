@@ -74,11 +74,5 @@ WEB II Hibernate
 
 ---
 
-## ⚙️ How to Run
 
-1. ✅ Update `hibernate.cfg.xml` with your database credentials.
-2. 🏗️ Create MySQL database schema (tables may auto-generate).
-3. 🚀 Compile and run from main controller class (`insert.java`, `StudentController.java`, etc.) using your favorite Java IDE.
-
----
 
