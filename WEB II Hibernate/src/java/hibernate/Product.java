@@ -38,7 +38,7 @@ public class Product implements Serializable {
     private int qty;
 
     //int brand_id
-    @ManyToOne
+    @ManyToOne  
     @JoinColumn(name = "brand_id")
     private Brand brand;
 
